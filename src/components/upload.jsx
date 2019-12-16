@@ -20,7 +20,7 @@ class Upload extends React.Component {
 
   doThing = () => {
     axios
-    .get(`http://127.0.0.1:3000/api/v1/pdfs/`)
+    .get(`http://127.0.0.1:3001/api/v1/pdfs/`)
     .catch(function (error) {
       // handle error
       console.log(error);})
@@ -36,14 +36,14 @@ class Upload extends React.Component {
     let file = new FormData();
     file.append('name',pdf[0])
     console.log(pdf[0]);
-    axios.post('http://127.0.0.1:3000/api/v1/pdfs/', file, {
+    axios.post('http://127.0.0.1:3001/api/v1/pdfs/', file, {
         headers: {
             'Content-Type': 'application/json',
         }
     })
   .then(response => {
     this.setState({
-      file: JSON.stringify(response.data)
+      file: response.data
     });
     console.log(response);
   })
