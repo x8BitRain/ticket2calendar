@@ -1,14 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Interface from './components/interface.jsx';
-import Upload from './components/upload.jsx';
+import Capture from './components/capture.jsx';
 
 function App() {
   return (
     <div className="App">
-      <Interface />
-      <Upload />
+      <Capture />
     </div>
   );
 }
