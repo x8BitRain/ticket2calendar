@@ -1,12 +1,10 @@
-import React from 'react';
-import { connect } from 'react-context-global-store';
-
+import React from "react";
+import { connect } from "react-context-global-store";
 
 class Interface extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (
@@ -17,4 +15,7 @@ class Interface extends React.Component {
   }
 }
 
-export default connect(Interface, ['counter']);
+export default connect(
+  Interface,
+  ["counter"]
+);
