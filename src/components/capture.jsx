@@ -17,11 +17,7 @@ export default class Capture extends React.Component {
         <button id="detect" onClick={this.detect}>
           Detect barcodes
         </button>
-        <img
-          id="image"
-          alt="shut"
-          src="https://raw.githubusercontent.com/ihabunek/pdf417-py/master/images/1_basic.jpg"
-        />
+        <img id="image" alt="shut" src="1_basic.jpg" />
         <br />
         <footer>waiting</footer>
       </div>
