@@ -7,7 +7,7 @@ var videoSelect = document.querySelector('select#videoSource');
 var videoOption = document.getElementById('videoOption');
 var buttonGo = document.getElementById('go');
 var barcode_result = document.getElementById('dbr');
-
+var string_result = ""
 var isPaused = false;
 var videoWidth = 640,
   videoHeight = 480;
@@ -17,21 +17,18 @@ var isPC = true;
 
 var ZXing = null;
 var decodePtr = null;
-
-var tick = function () {
-  if (window.ZXing) {
-    ZXing = ZXing();
+var Module = {
+  onRuntimeInitialized: function () {
+    ZXing = Module;
     decodePtr = ZXing.Runtime.addFunction(decodeCallback);
-  } else {
-    setTimeout(tick, 10);
   }
 };
-tick();
 
 var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   var result = new Uint8Array(ZXing.HEAPU8.buffer, ptr, len);
   console.log(String.fromCharCode.apply(null, result));
-  barcode_result.textContent = String.fromCharCode.apply(null, result);
+  barcode_result.innerText = String.fromCharCode.apply(null, result);
+  string_result = String.fromCharCode.apply(null, result);
   buttonGo.disabled = false;
   if (isPC) {
     canvas.style.display = 'block';

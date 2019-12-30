@@ -28,15 +28,15 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+   <div id="dbr" ></div>
+        <div className="select">
+          <label htmlFor="videoSource">Video source: </label><select id="videoSource"></select>
+        </div>
+        <button id="go">Read Barcode</button>
+        <video muted autoPlay id="video" playsInline={true}></video>
+        <canvas id="pcCanvas" width="640" height="480" ></canvas>
+        <canvas id="mobileCanvas" width="240" height="320" ></canvas>
+        <script async src="zxing.js"></script>
+        <script src="video.js"></script>
   </body>
 </html>
