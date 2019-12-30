@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ticket2calendar/static/css/main.d1b05096.chunk.css",
-    "main.js": "/ticket2calendar/static/js/main.da4a73f2.chunk.js",
-    "main.js.map": "/ticket2calendar/static/js/main.da4a73f2.chunk.js.map",
+    "main.js": "/ticket2calendar/static/js/main.beffcaa2.chunk.js",
+    "main.js.map": "/ticket2calendar/static/js/main.beffcaa2.chunk.js.map",
     "runtime-main.js": "/ticket2calendar/static/js/runtime-main.8f901e58.js",
     "runtime-main.js.map": "/ticket2calendar/static/js/runtime-main.8f901e58.js.map",
     "static/js/2.db04a3e5.chunk.js": "/ticket2calendar/static/js/2.db04a3e5.chunk.js",
     "static/js/2.db04a3e5.chunk.js.map": "/ticket2calendar/static/js/2.db04a3e5.chunk.js.map",
     "index.html": "/ticket2calendar/index.html",
-    "precache-manifest.9b272684bf17844fd552beafc22d7c54.js": "/ticket2calendar/precache-manifest.9b272684bf17844fd552beafc22d7c54.js",
+    "precache-manifest.614ddf942b81f3aa4e276ecb474a595c.js": "/ticket2calendar/precache-manifest.614ddf942b81f3aa4e276ecb474a595c.js",
     "service-worker.js": "/ticket2calendar/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/ticket2calendar/static/css/main.d1b05096.chunk.css.map",
     "static/js/2.db04a3e5.chunk.js.LICENSE": "/ticket2calendar/static/js/2.db04a3e5.chunk.js.LICENSE",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.8f901e58.js",
     "static/js/2.db04a3e5.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.da4a73f2.chunk.js"
+    "static/js/main.beffcaa2.chunk.js"
   ]
 }
