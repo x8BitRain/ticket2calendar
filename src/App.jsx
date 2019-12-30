@@ -5,7 +5,7 @@ import Capture from './components/capture.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Capture />
     </div>
   );

@@ -6,8 +6,7 @@ var mobileCtx = mobileCanvas.getContext('2d');
 var videoSelect = document.querySelector('select#videoSource');
 var videoOption = document.getElementById('videoOption');
 var buttonGo = document.getElementById('go');
-var barcode_result = document.getElementById('dbr');
-var string_result = ""
+var string_result = null
 var isPaused = false;
 var videoWidth = 640,
   videoHeight = 480;
@@ -26,9 +25,12 @@ var Module = {
 
 var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   var result = new Uint8Array(ZXing.HEAPU8.buffer, ptr, len);
-  console.log(String.fromCharCode.apply(null, result));
-  barcode_result.innerText = String.fromCharCode.apply(null, result);
-  string_result = String.fromCharCode.apply(null, result);
+  var found = String.fromCharCode.apply(null, result)
+  console.log("Found Barcode! " + found);
+  var barcode_result = document.getElementById('dbr');
+  barcode_result.innerText = found;
+  string_result = found;
+  var global_result = window.localStorage.setItem('barcode', found);;
   buttonGo.disabled = false;
   if (isPC) {
     canvas.style.display = 'block';
@@ -96,11 +98,12 @@ buttonGo.onclick = function () {
 
   isPaused = false;
   scanBarcode();
-  buttonGo.disabled = true;
+  //buttonGo.disabled = true;
 };
 
 // scan barcode
 function scanBarcode() {
+  var barcode_result = document.getElementById('dbr');
   barcode_result.textContent = "";
 
   if (ZXing == null) {
@@ -130,7 +133,6 @@ function scanBarcode() {
   context.drawImage(videoElement, 0, 0, width, height);
 
   var vid = document.getElementById("video");
-  console.log("video width: " + vid.videoWidth + ", height: " + vid.videoHeight);
   var barcodeCanvas = document.createElement("canvas");
   barcodeCanvas.width = vid.videoWidth;
   barcodeCanvas.height = vid.videoHeight;
@@ -141,15 +143,15 @@ function scanBarcode() {
   var imageData = barcodeContext.getImageData(0, 0, imageWidth, imageHeight);
   var idd = imageData.data;
   var image = ZXing._resize(imageWidth, imageHeight);
-  console.time("decode barcode");
   for (var i = 0, j = 0; i < idd.length; i += 4, j++) {
     ZXing.HEAPU8[image + j] = idd[i];
   }
   var err = ZXing._decode_any(decodePtr);
-  console.timeEnd('decode barcode');
-  console.log("error code", err);
+  
+  //console.log("error code", err);
   if (err == -2) {
     setTimeout(scanBarcode, 30);
+    console.log('looking for barcode');
   }
 }
 // https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources 
@@ -169,8 +171,6 @@ function gotDevices(deviceInfos) {
       option.text = deviceInfo.label || 'camera ' +
         (videoSelect.length + 1);
       videoSelect.appendChild(option);
-    } else {455
-      console.log('Found one other kind of source/device: ', deviceInfo);
     }
   }
 }
