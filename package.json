@@ -2,6 +2,7 @@
   "name": "ticket2calendar",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://x8bitrain.github.io/ticket2calendar/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -15,7 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "react-scripts build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,5 +34,9 @@
     ]
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "react-app-rewired": "^2.1.5"
+  }
 }
