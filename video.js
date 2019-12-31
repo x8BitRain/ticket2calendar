@@ -107,7 +107,7 @@ function scanBarcode() {
   // barcode_result.textContent = "";
 
   if (ZXing == null) {
-    alert("Barcode Reader is not ready!");
+    if(!alert('Failed to load, refreshing usually helps, refresh?')){window.location.reload();}
     return;
   }
 
