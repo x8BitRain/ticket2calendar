@@ -51,7 +51,7 @@ export default class Capture extends React.Component {
     return (
       <div>
         
-        <h3 id="headtxt">Scan a boarding pass that looks like this or this.</h3>
+        <h3 id="headtxt">Scan a boarding pass that looks like <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png">this</a> or <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png">this</a>.</h3>
         {this.state.bcbp_result ? 
             <Results values={this.state.bcbp_result} />
          : null}
