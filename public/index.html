@@ -27,14 +27,14 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
         <div hidden className="select">
           <label htmlFor="videoSource">Video source: </label><select id="videoSource"></select>
         </div>
-        <button id="go">Read Barcode</button>
         <video muted autoPlay id="video" playsInline={true}></video>
         <canvas hidden id="pcCanvas" width="640" height="480" ></canvas>
         <canvas hidden id="mobileCanvas" width="240" height="320" ></canvas>
+        <div id="root"></div>
+        
         <script async src="zxing.js"></script>
         <script src="video.js"></script>
   </body>

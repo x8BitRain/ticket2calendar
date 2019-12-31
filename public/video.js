@@ -5,7 +5,6 @@ var ctx = canvas.getContext('2d');
 var mobileCtx = mobileCanvas.getContext('2d');
 var videoSelect = document.querySelector('select#videoSource');
 var videoOption = document.getElementById('videoOption');
-var buttonGo = document.getElementById('go');
 var string_result = null
 var isPaused = false;
 var videoWidth = 640,
@@ -13,25 +12,27 @@ var videoWidth = 640,
 var mobileVideoWidth = 240,
   mobileVideoHeight = 320;
 var isPC = true;
-
+var html = document.getElementsByTagName('html');
+var is_ready = false
 var ZXing = null;
 var decodePtr = null;
 var Module = {
   onRuntimeInitialized: function () {
     ZXing = Module;
     decodePtr = ZXing.Runtime.addFunction(decodeCallback);
+    is_ready = true;
   }
 };
 
 var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   var result = new Uint8Array(ZXing.HEAPU8.buffer, ptr, len);
   var found = String.fromCharCode.apply(null, result)
-  console.log("Found Barcode! " + found);
+  console.log("Found Barcode!");
   var barcode_result = document.getElementById('dbr');
   barcode_result.innerText = found;
   string_result = found;
   var global_result = window.localStorage.setItem('barcode', found);;
-  buttonGo.disabled = false;
+  
   if (isPC) {
     canvas.style.display = 'block';
   } else {
@@ -89,17 +90,16 @@ function dataURItoBlob(dataURI) {
 }
 
 // add button event
-buttonGo.onclick = function () {
-  if (isPC) {
-    canvas.style.display = 'none';
-  } else {
-    mobileCanvas.style.display = 'none';
-  }
+// buttonGo.onclick = function () {
+//   if (isPC) {
+//     canvas.style.display = 'none';
+//   } else {
+//     mobileCanvas.style.display = 'none';
+//   }
 
-  isPaused = false;
-  scanBarcode();
-  //buttonGo.disabled = true;
-};
+//   isPaused = false;
+//   scanBarcode();
+// };
 
 // scan barcode
 function scanBarcode() {
@@ -107,7 +107,6 @@ function scanBarcode() {
   barcode_result.textContent = "";
 
   if (ZXing == null) {
-    buttonGo.disabled = false;
     alert("Barcode Reader is not ready!");
     return;
   }
@@ -148,9 +147,9 @@ function scanBarcode() {
   }
   var err = ZXing._decode_any(decodePtr);
   
-  //console.log("error code", err);
+  console.log("error code", err);
   if (err == -2) {
-    setTimeout(scanBarcode, 30);
+    setTimeout(scanBarcode, 200);
     console.log('looking for barcode');
   }
 }
@@ -176,7 +175,6 @@ function gotDevices(deviceInfos) {
 }
 
 function getStream() {
-  buttonGo.disabled = false;
   if (window.stream) {
     window.stream.getTracks().forEach(function(track) {
       track.stop();

@@ -1,6 +1,7 @@
 import React from "react";
 import { parseBCBP } from 'bcbp-parser';
-
+import Results from "./results.jsx"
+let assssss = {}
 export default class Capture extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,7 @@ export default class Capture extends React.Component {
     document.getElementById("pcCanvas").remove();
     document.getElementById("mobileCanvas").remove();
     let w = new Worker("result_check.js");
+    setTimeout(async function(){ window.scanBarcode() }, 1000);
     w.onmessage = () => {
       console.log(this.state.result_string)
       if (localStorage.barcode) {
@@ -24,6 +26,9 @@ export default class Capture extends React.Component {
           console.log(this.state.result_string);
           this.setState({
             bcbp_result: parseBCBP(this.state.result_string)
+          }, ()=>{
+            console.log(this.state.bcbp_result);
+            assssss = this.state.bcbp_result
           });
         });
       }
@@ -42,15 +47,17 @@ export default class Capture extends React.Component {
     console.log(this.state.bcbp_result);
   }
 
-  render() {
+   render() {
     return (
       <div>
         <div id="dbr" ></div> 
-          { this.state.result_string === "test" ? <h1>BIG TEST</h1> : null }
-        <button onClick={this.detect}>result!</button>
-        <button onClick={this.thing}>do thing</button>
+        <button onClick={this.thing}>Print result!</button>
+        {this.state.bcbp_result ? 
+            <Results values={this.state.bcbp_result} />
+         : null}
       </div>
     );
   }
 }
 
+        // {this.state.bcbp_result ? <Results results={} /> : null}
