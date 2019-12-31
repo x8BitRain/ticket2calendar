@@ -151,11 +151,13 @@ function scanBarcode() {
   if (err == -2) {
     setTimeout(scanBarcode, 200);
     console.log('looking for barcode');
-  } else {
+  } else if (err == -4) {
     console.log("Ran into error code", err);
     let headtxt = document.getElementById('headtxt');
     headtxt.innerText = `Ran into Error ${err} :(`
     headtxt.style = 'color: red'
+  } else {
+    null
   }
 }
 // https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources 
