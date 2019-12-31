@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "29c84e8a7ae6e8f376b027da1067f559",
+    "revision": "bc760dd3f60476053ab07a899b638302",
     "url": "/ticket2calendar/index.html"
   },
   {
-    "revision": "066b1532696a00ea99fd",
-    "url": "/ticket2calendar/static/css/main.d1b05096.chunk.css"
+    "revision": "29e19270a786ae7856c1",
+    "url": "/ticket2calendar/static/css/main.273d460a.chunk.css"
   },
   {
     "revision": "e0ef815a462a59dc805e",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ticket2calendar/static/js/2.999088f1.chunk.js.LICENSE"
   },
   {
-    "revision": "066b1532696a00ea99fd",
-    "url": "/ticket2calendar/static/js/main.6c920777.chunk.js"
+    "revision": "29e19270a786ae7856c1",
+    "url": "/ticket2calendar/static/js/main.1910ebb0.chunk.js"
   },
   {
     "revision": "ced86777c60661b1fab7",
