@@ -50,8 +50,8 @@ export default class Capture extends React.Component {
    render() {
     return (
       <div>
-        <div id="dbr" ></div> 
-        <button onClick={this.thing}>Print result!</button>
+        
+        <h3 id="headtxt">Scan a boarding pass that looks like this or this.</h3>
         {this.state.bcbp_result ? 
             <Results values={this.state.bcbp_result} />
          : null}

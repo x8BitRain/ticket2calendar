@@ -28,8 +28,8 @@ var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   var result = new Uint8Array(ZXing.HEAPU8.buffer, ptr, len);
   var found = String.fromCharCode.apply(null, result)
   console.log("Found Barcode!");
-  var barcode_result = document.getElementById('dbr');
-  barcode_result.innerText = found;
+  // var barcode_result = document.getElementById('dbr');
+  // barcode_result.innerText = found;
   string_result = found;
   var global_result = window.localStorage.setItem('barcode', found);;
   
@@ -103,8 +103,8 @@ function dataURItoBlob(dataURI) {
 
 // scan barcode
 function scanBarcode() {
-  var barcode_result = document.getElementById('dbr');
-  barcode_result.textContent = "";
+  // var barcode_result = document.getElementById('dbr');
+  // barcode_result.textContent = "";
 
   if (ZXing == null) {
     alert("Barcode Reader is not ready!");
@@ -147,10 +147,15 @@ function scanBarcode() {
   }
   var err = ZXing._decode_any(decodePtr);
   
-  console.log("error code", err);
+  //console.log("error code", err);
   if (err == -2) {
     setTimeout(scanBarcode, 200);
     console.log('looking for barcode');
+  } else {
+    console.log("Ran into error code", err);
+    let headtxt = document.getElementById('headtxt');
+    headtxt.innerText = `Ran into Error ${err} :(`
+    headtxt.style = 'color: red'
   }
 }
 // https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources 
