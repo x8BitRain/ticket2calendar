@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/ticket2calendar/static/css/main.d1b05096.chunk.css",
-    "main.js": "/ticket2calendar/static/js/main.63269397.chunk.js",
-    "main.js.map": "/ticket2calendar/static/js/main.63269397.chunk.js.map",
+    "main.js": "/ticket2calendar/static/js/main.bf469bfe.chunk.js",
+    "main.js.map": "/ticket2calendar/static/js/main.bf469bfe.chunk.js.map",
     "runtime-main.js": "/ticket2calendar/static/js/runtime-main.8f901e58.js",
     "runtime-main.js.map": "/ticket2calendar/static/js/runtime-main.8f901e58.js.map",
-    "static/js/2.0899ff29.chunk.js": "/ticket2calendar/static/js/2.0899ff29.chunk.js",
-    "static/js/2.0899ff29.chunk.js.map": "/ticket2calendar/static/js/2.0899ff29.chunk.js.map",
+    "static/js/2.999088f1.chunk.js": "/ticket2calendar/static/js/2.999088f1.chunk.js",
+    "static/js/2.999088f1.chunk.js.map": "/ticket2calendar/static/js/2.999088f1.chunk.js.map",
     "index.html": "/ticket2calendar/index.html",
-    "precache-manifest.8da8481a74cbbbc32880d47744ed144e.js": "/ticket2calendar/precache-manifest.8da8481a74cbbbc32880d47744ed144e.js",
+    "precache-manifest.967c89928b2688a1f4ea206ae153cab9.js": "/ticket2calendar/precache-manifest.967c89928b2688a1f4ea206ae153cab9.js",
     "service-worker.js": "/ticket2calendar/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/ticket2calendar/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.0899ff29.chunk.js.LICENSE": "/ticket2calendar/static/js/2.0899ff29.chunk.js.LICENSE",
+    "static/js/2.999088f1.chunk.js.LICENSE": "/ticket2calendar/static/js/2.999088f1.chunk.js.LICENSE",
     "static/media/logo.svg": "/ticket2calendar/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8f901e58.js",
-    "static/js/2.0899ff29.chunk.js",
+    "static/js/2.999088f1.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.63269397.chunk.js"
+    "static/js/main.bf469bfe.chunk.js"
   ]
 }
