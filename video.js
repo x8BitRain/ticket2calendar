@@ -27,9 +27,7 @@ var Module = {
 var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   var result = new Uint8Array(ZXing.HEAPU8.buffer, ptr, len);
   var found = String.fromCharCode.apply(null, result)
-  console.log("Found Barcode!");
-  // var barcode_result = document.getElementById('dbr');
-  // barcode_result.innerText = found;
+  console.log("Found Barcode!\n", found);
   string_result = found;
   var global_result = window.localStorage.setItem('barcode', found);;
   
@@ -40,7 +38,6 @@ var decodeCallback = function (ptr, len, resultIndex, resultCount) {
   }
 };
 
-// check devices
 function browserRedirect() {
   var deviceType;
   var sUserAgent = navigator.userAgent.toLowerCase();
@@ -103,8 +100,6 @@ function dataURItoBlob(dataURI) {
 
 // scan barcode
 function scanBarcode() {
-  // var barcode_result = document.getElementById('dbr');
-  // barcode_result.textContent = "";
 
   if (ZXing == null) {
     if(!alert('Failed to load, refreshing usually helps, refresh?')){window.location.reload();}
@@ -160,6 +155,7 @@ function scanBarcode() {
     null
   }
 }
+
 // https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources 
 var videoSelect = document.querySelector('select#videoSource');
 
