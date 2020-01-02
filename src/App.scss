@@ -1,8 +1,12 @@
 .App {
   //text-align: center;
   display: flex;
-  align-items: center;
+  //align-items: center;
   justify-content: center;
+  height: fit-content;
+  width: 100%;
+  background-color: #fbfbfb;
+
 }
 
 .App-logo {
@@ -10,10 +14,13 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#head-txt {
+  text-align: center;
+}
+
+#capture {
+  width: auto;
+  height: fit-content;
 }
 
 .App-header {
@@ -44,15 +51,20 @@
   }
 }
 
-#calendar {
-  -webkit-box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
-  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+.card {
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
   background: #ffffff;
+  padding:20px;
+  border-radius: 8px;
+}
+
+#calendar {
+  
   width:450px;
   height:470px;
-  padding:28px;
+  padding:38px;
   border-radius: 8px;
-  h3, h4 {
+  h3, h4, p {
     margin: 5px 0 0 0;
     display:inline-block;
   }
@@ -63,6 +75,13 @@
     width:24px !important;
     padding-right: 10px
   }
+  a {
+    &:-webkit-any-link {
+      color: #3c4043;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
   .minor-txt {
     margin:3px 0 0 0;
   }
@@ -70,7 +89,14 @@
     padding-left: 10px + 24px;
   }
   .section {
-    margin:20px 0 20px 0;
+    margin:35px 0 35px 0;
+  }
+  .first {
+    margin:0px 0 35px 0;
+  }
+  .to {
+    padding-left:10px;
+    transform: translateY(-2px);
   }
 }
 

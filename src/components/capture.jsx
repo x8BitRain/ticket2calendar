@@ -2,6 +2,7 @@ import React from "react";
 import { parseBCBP } from 'bcbp-parser';
 import Results from "./results.jsx"
 import Calendar from "./calendar.jsx"
+import Loader from "./loader.jsx";
 
 export default class Capture extends React.Component {
   constructor(props) {
@@ -56,9 +57,10 @@ export default class Capture extends React.Component {
 
    render() {
     return (
-      <div>
+      <div id="capture">
         
-        <h3 id="headtxt">Scan a boarding pass that looks like <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png">this</a> or <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png">this</a>.</h3>
+        {!this.state.bcbp_result ? <Loader /> : null}
+        {!this.state.bcbp_result ? <p class="card" id="headtxt">Scan a boarding pass that a barcode that looks like <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png">this</a> or <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png">this</a>.</p> : null}
         {this.state.bcbp_result ?
           <React.Fragment> 
             <Calendar values={this.state.bcbp_result} />
