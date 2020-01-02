@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default class Results extends React.Component {
   constructor(props) {
@@ -9,12 +9,12 @@ export default class Results extends React.Component {
     let bcbp = JSON.parse(JSON.stringify(this.props.values));
     return (
       <div>
-      
-        {Object.keys(bcbp).map(key => 
+      <details closed="true">
+        <summary>Debug Details</summary>
+        {bcbp ? Object.keys(bcbp).map(key => 
           <p key={Math.random()}>{key}: {bcbp[key]}</p>
-        )}
-      
-        
+        ) : null}
+         </details>
       </div>
     );
   }

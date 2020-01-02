@@ -1,0 +1,87 @@
+.App {
+  //text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#video-container {
+  width:100%;
+  height: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:black;
+  #video {
+    height:100%;
+    width:100%;
+  }
+}
+
+#calendar {
+  -webkit-box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+  background: #ffffff;
+  width:450px;
+  height:470px;
+  padding:28px;
+  border-radius: 8px;
+  h3, h4 {
+    margin: 5px 0 0 0;
+    display:inline-block;
+  }
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height:24px !important;
+    width:24px !important;
+    padding-right: 10px
+  }
+  .minor-txt {
+    margin:3px 0 0 0;
+  }
+  .minor-txt {
+    padding-left: 10px + 24px;
+  }
+  .section {
+    margin:20px 0 20px 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #video-container {
+    height:60vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #video-container {
+    height: 80%;
+  }
+}

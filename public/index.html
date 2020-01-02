@@ -30,8 +30,9 @@
         <div hidden className="select">
           <label htmlFor="videoSource">Video source: </label><select id="videoSource"></select>
         </div>
-        <br>
-        <center><video muted autoPlay id="video" playsInline={true}></video></center>
+        <div id="video-container">
+          <video muted autoPlay id="video" playsInline={true}></video>
+        </div>
         <canvas hidden id="pcCanvas" width="640" height="480" ></canvas>
         <canvas hidden id="mobileCanvas" width="240" height="320" ></canvas>
         <div id="root"></div>
