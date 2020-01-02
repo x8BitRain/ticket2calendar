@@ -2,7 +2,7 @@ import React from "react";
 import { parseBCBP } from 'bcbp-parser';
 import Results from "./results.jsx"
 import Calendar from "./calendar.jsx"
-import openflights from "openflights-cached";
+
 export default class Capture extends React.Component {
   constructor(props) {
     super(props);
@@ -13,9 +13,9 @@ export default class Capture extends React.Component {
   }
 
   componentDidMount() {
-    console.log(openflights.findIATA("DPS").name);
-    console.log(openflights.findIATA("DPS").country);
-    console.log(openflights.findIATA("DPS").city);
+    // console.log(openflights.findIATA("DPS").name);
+    // console.log(openflights.findIATA("DPS").country);
+    // console.log(openflights.findIATA("DPS").city);
 
     document.getElementById("pcCanvas").remove();
     document.getElementById("mobileCanvas").remove();
