@@ -2141,10 +2141,9 @@ batch@0.6.1:
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
   integrity sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY=
 
-bcbp-parser@^0.0.3:
+"bcbp-parser@https://github.com/x8BitRain/bcbp-parser/tarball/master":
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/bcbp-parser/-/bcbp-parser-0.0.3.tgz#acd3fe60352a3878469db8c0edfef5772f90d00a"
-  integrity sha512-QoYcUXlFRSEvFSxuR5zhspxHAKmBTrtj+jr1ALqWngiLVEXio9/TuouoQPPfgk7GRD+L5jpqASsHcZ1EctcIyw==
+  resolved "https://github.com/x8BitRain/bcbp-parser/tarball/master#589349dbf525bd933b0c08d20ad3bbd178fd8a38"
 
 bcrypt-pbkdf@^1.0.0:
   version "1.0.2"
