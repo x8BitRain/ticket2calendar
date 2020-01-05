@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ticket2calendar/static/css/main.1b7b1392.chunk.css",
-    "main.js": "/ticket2calendar/static/js/main.8331211f.chunk.js",
-    "main.js.map": "/ticket2calendar/static/js/main.8331211f.chunk.js.map",
+    "main.css": "/ticket2calendar/static/css/main.584c1122.chunk.css",
+    "main.js": "/ticket2calendar/static/js/main.095dc27f.chunk.js",
+    "main.js.map": "/ticket2calendar/static/js/main.095dc27f.chunk.js.map",
     "runtime-main.js": "/ticket2calendar/static/js/runtime-main.8f901e58.js",
     "runtime-main.js.map": "/ticket2calendar/static/js/runtime-main.8f901e58.js.map",
-    "static/js/2.eb7bb542.chunk.js": "/ticket2calendar/static/js/2.eb7bb542.chunk.js",
-    "static/js/2.eb7bb542.chunk.js.map": "/ticket2calendar/static/js/2.eb7bb542.chunk.js.map",
+    "static/js/2.4ad2cc02.chunk.js": "/ticket2calendar/static/js/2.4ad2cc02.chunk.js",
+    "static/js/2.4ad2cc02.chunk.js.map": "/ticket2calendar/static/js/2.4ad2cc02.chunk.js.map",
     "index.html": "/ticket2calendar/index.html",
-    "precache-manifest.e3c96a575a1585d9309748266d8cef7e.js": "/ticket2calendar/precache-manifest.e3c96a575a1585d9309748266d8cef7e.js",
+    "precache-manifest.61e0ad2a67cf7742d366f02f43a55a6e.js": "/ticket2calendar/precache-manifest.61e0ad2a67cf7742d366f02f43a55a6e.js",
     "service-worker.js": "/ticket2calendar/service-worker.js",
-    "static/css/main.1b7b1392.chunk.css.map": "/ticket2calendar/static/css/main.1b7b1392.chunk.css.map",
-    "static/js/2.eb7bb542.chunk.js.LICENSE": "/ticket2calendar/static/js/2.eb7bb542.chunk.js.LICENSE",
+    "static/css/main.584c1122.chunk.css.map": "/ticket2calendar/static/css/main.584c1122.chunk.css.map",
+    "static/js/2.4ad2cc02.chunk.js.LICENSE": "/ticket2calendar/static/js/2.4ad2cc02.chunk.js.LICENSE",
     "static/media/airplane.svg": "/ticket2calendar/static/media/airplane.2e6814f3.svg",
     "static/media/arrow-right.svg": "/ticket2calendar/static/media/arrow-right.b045fb50.svg",
     "static/media/location.svg": "/ticket2calendar/static/media/location.b2f804bd.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8f901e58.js",
-    "static/js/2.eb7bb542.chunk.js",
-    "static/css/main.1b7b1392.chunk.css",
-    "static/js/main.8331211f.chunk.js"
+    "static/js/2.4ad2cc02.chunk.js",
+    "static/css/main.584c1122.chunk.css",
+    "static/js/main.095dc27f.chunk.js"
   ]
 }
