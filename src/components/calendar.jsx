@@ -48,10 +48,7 @@ class Calendar extends React.Component {
                 lng: openflights.findIATA(bcbp.destination).longitude,
               },
             }
-          }, ()=> console.log(this.props.store.airports));
-          console.log(this.props.store.airports);
-          //console.log(openflights.findIATA(bcbp.origin).latitude,);
-          //console.log(openflights.findIATA(bcbp.destination).latitude,);
+          });
         });
     
   }
