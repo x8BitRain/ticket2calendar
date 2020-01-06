@@ -3,8 +3,10 @@ import { parseBCBP } from 'bcbp-parser';
 import Results from "./results.jsx"
 import Calendar from "./calendar.jsx"
 import Loader from "./loader.jsx";
+import Map from "./map.jsx";
+import { connect } from 'react-context-global-store';
 
-export default class Capture extends React.Component {
+class Capture extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,9 +16,6 @@ export default class Capture extends React.Component {
   }
 
   componentDidMount() {
-    // console.log(openflights.findIATA("DPS").name);
-    // console.log(openflights.findIATA("DPS").country);
-    // console.log(openflights.findIATA("DPS").city);
 
     document.getElementById("pcCanvas").remove();
     document.getElementById("mobileCanvas").remove();
@@ -43,6 +42,10 @@ export default class Capture extends React.Component {
           }, ()=>{
              console.log(this.state.bcbp_result);
              w.terminate();
+             // Close Camera
+             window.stream.getTracks().forEach(function(track) {
+	             track.stop();
+	          });
           });
         });
       }
@@ -50,30 +53,27 @@ export default class Capture extends React.Component {
   }
 
 
-  thing = (e) => {
-    console.log(this.state.result_string);
-    console.log(this.state.bcbp_result);
-  }
-
    render() {
     return (
-      <div id="capture">
-        
-        {!this.state.bcbp_result ? <Loader /> : null}
-        {!this.state.bcbp_result ? <p class="card" id="headtxt">Scan a boarding pass that a barcode that looks like <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png">this</a> or <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png">this</a>.</p> : null}
-        {this.state.bcbp_result ?
-          <React.Fragment> 
-            <Calendar values={this.state.bcbp_result} />
-          </React.Fragment>
-         : null}
-          <br></br>
-          
-            <Results values={this.state.bcbp_result} />
-         
-          <br></br>
-      </div>
+      <React.Fragment>
+      {this.props.store.airports.ready ? <Map  /> : null}
+        <div id="capture">
+          {!this.state.bcbp_result ? <Loader /> : null}
+          {!this.state.bcbp_result ? <p class="card" id="headtxt">Scan a boarding pass that a barcode that looks like <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png">this</a> or <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png">this</a>.</p> : null}
+          {this.state.bcbp_result ?
+            <React.Fragment> 
+              <Calendar values={this.state.bcbp_result} />
+            </React.Fragment>
+           : null}
+            <br></br>
+            
+              <Results values={this.state.bcbp_result} />
+           
+            <br></br>
+        </div>
+      </React.Fragment>
     );
   }
 }
 
-        // {this.state.bcbp_result ? <Results results={} /> : null}
+export default connect(Capture, ['airports']);

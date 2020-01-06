@@ -1,12 +1,10 @@
 import React from 'react';
 import airplane from './svg/airplane.svg';
-import location from './svg/location.svg';
-import text from './svg/text.svg';
-import arrowRight from './svg/arrow-right.svg';
 import openflights from "openflights-cached";
 import moment from "moment";
+import { connect } from 'react-context-global-store';
 
-export default class Calendar extends React.Component {
+class Calendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,18 +33,37 @@ export default class Calendar extends React.Component {
      flight_booking_no: bcbp.pnr,
      flight_seat: bcbp.seat,
      flight_checked_in: bcbp.passenger_status,
-     ready : 1
+     ready : 0
     }, 
     ()=>{
          console.log(this.state.destination);
          console.log(this.state.flight_no);
          console.log(this.state.flight_time);
+         console.log("STORE:");
+         
+          this.props.setStore({
+          airports: {
+              ready: true, 
+              origin: { 
+                lat: openflights.findIATA(bcbp.origin).latitude,
+                lng: openflights.findIATA(bcbp.origin).longitude,
+                },
+              destination: { // The second level substore can be an array or other data structure
+                lat: openflights.findIATA(bcbp.destination).latitude,
+                lng: openflights.findIATA(bcbp.destination).longitude,
+              },
+            }
+          });
+         // const { origin, destination } = this.props.store.airports;
+         // console.log(origin);
+         // console.log(destination);
         });
     
   }
 
   render() {
     return (
+
       <React.Fragment><br></br>
       <div id="calendar" className="card">
       <div id="plane-icon">
@@ -112,6 +129,9 @@ export default class Calendar extends React.Component {
     );
   }
 }
+
+export default connect(Calendar, ['airports']);
+
 
 //  <img className="to" src={arrowRight} alt="Up Arrow"/>
 // <img alt="Location" src={location} />

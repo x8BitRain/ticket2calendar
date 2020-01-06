@@ -8,13 +8,15 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bcbp-parser": "https://github.com/x8BitRain/bcbp-parser/tarball/master",
+    "mapbox-gl": "^1.6.1",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "openflights-cached": "^1.2.0",
     "react": "^16.12.0",
-    "react-context-global-store": "1.1.0",
+    "react-context-global-store": "^1.1.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "react-transition-group": "^4.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
