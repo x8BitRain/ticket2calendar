@@ -149,8 +149,9 @@ function scanBarcode() {
   } else if (err == -4) {
     console.log("Ran into error code", err);
     let headtxt = document.getElementById('headtxt');
-    headtxt.innerText = `Ran into Error ${err} :(`
-    headtxt.style = 'color: red'
+    document.getElementById('loader').remove();
+    headtxt.innerHTML = `<center><p>Ran into Error ${err} :(</p><a href="/">Retry</a></center>`;
+    headtxt.style = 'color: red; padding-top: 9px;';
   } else {
     null
   }
