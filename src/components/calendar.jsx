@@ -35,12 +35,7 @@ class Calendar extends React.Component {
      flight_checked_in: bcbp.passenger_status,
      ready : 0
     }, 
-    ()=>{
-         console.log(this.state.destination);
-         console.log(this.state.flight_no);
-         console.log(this.state.flight_time);
-         console.log("STORE:");
-         
+    ()=>{   
           this.props.setStore({
           airports: {
               ready: true, 
@@ -53,10 +48,10 @@ class Calendar extends React.Component {
                 lng: openflights.findIATA(bcbp.destination).longitude,
               },
             }
-          });
-         // const { origin, destination } = this.props.store.airports;
-         // console.log(origin);
-         // console.log(destination);
+          }, ()=> console.log(this.props.store.airports));
+          console.log(this.props.store.airports);
+          //console.log(openflights.findIATA(bcbp.origin).latitude,);
+          //console.log(openflights.findIATA(bcbp.destination).latitude,);
         });
     
   }

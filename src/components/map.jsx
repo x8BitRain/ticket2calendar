@@ -14,11 +14,10 @@ class Map extends React.Component {
 
 	componentDidMount() {
 		const { origin, destination } = this.props.store.airports;
+		console.log('wow');
+		console.log(origin, destination);
 		renderRoute([origin.lng, origin.lat], [destination.lng, destination.lat]);
 	}
-
-
-
 
 	render() {
 		return (
