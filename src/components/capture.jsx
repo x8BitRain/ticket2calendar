@@ -59,7 +59,7 @@ class Capture extends React.Component {
       {this.props.store.airports.ready ? <Map  /> : null}
         <div id="capture">
           {!this.state.bcbp_result ? <Loader /> : null}
-          {!this.state.bcbp_result ? <p class="card" id="headtxt">Scan a boarding pass that a barcode that looks like <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png">this</a> or <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png">this</a>.</p> : null}
+          {!this.state.bcbp_result ? <p className="card" id="headtxt">Scan a boarding pass that a barcode that looks like <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png">this</a> or <a href="https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png">this</a>.</p> : null}
           {this.state.bcbp_result ?
             <React.Fragment> 
               <Calendar values={this.state.bcbp_result} />
