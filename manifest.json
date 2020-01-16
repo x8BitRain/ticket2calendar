@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Ticket2Calendar",
+  "name": "Ticket2Calendar",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,16 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://x8bitrain.github.io/ticket2calendar/",
   "display": "standalone",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.android.chrome"
+    }
+  ],
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#FFFFFF",
+  "scope":"https://x8bitrain.github.io/ticket2calendar/"
 }

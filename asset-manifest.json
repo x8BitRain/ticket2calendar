@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ticket2calendar/static/css/main.8687cdf2.chunk.css",
-    "main.js": "/ticket2calendar/static/js/main.a6aaf690.chunk.js",
-    "main.js.map": "/ticket2calendar/static/js/main.a6aaf690.chunk.js.map",
+    "main.css": "/ticket2calendar/static/css/main.ba14d30d.chunk.css",
+    "main.js": "/ticket2calendar/static/js/main.0b82f15e.chunk.js",
+    "main.js.map": "/ticket2calendar/static/js/main.0b82f15e.chunk.js.map",
     "runtime-main.js": "/ticket2calendar/static/js/runtime-main.8f901e58.js",
     "runtime-main.js.map": "/ticket2calendar/static/js/runtime-main.8f901e58.js.map",
-    "static/js/2.bb42fe6c.chunk.js": "/ticket2calendar/static/js/2.bb42fe6c.chunk.js",
-    "static/js/2.bb42fe6c.chunk.js.map": "/ticket2calendar/static/js/2.bb42fe6c.chunk.js.map",
+    "static/js/2.6d0174da.chunk.js": "/ticket2calendar/static/js/2.6d0174da.chunk.js",
+    "static/js/2.6d0174da.chunk.js.map": "/ticket2calendar/static/js/2.6d0174da.chunk.js.map",
     "index.html": "/ticket2calendar/index.html",
-    "precache-manifest.9f356343a62ce7d62750577c0df190e1.js": "/ticket2calendar/precache-manifest.9f356343a62ce7d62750577c0df190e1.js",
+    "precache-manifest.c83d774c2b59aa61cc8432883b3253c1.js": "/ticket2calendar/precache-manifest.c83d774c2b59aa61cc8432883b3253c1.js",
     "service-worker.js": "/ticket2calendar/service-worker.js",
-    "static/css/main.8687cdf2.chunk.css.map": "/ticket2calendar/static/css/main.8687cdf2.chunk.css.map",
-    "static/js/2.bb42fe6c.chunk.js.LICENSE": "/ticket2calendar/static/js/2.bb42fe6c.chunk.js.LICENSE",
+    "static/css/main.ba14d30d.chunk.css.map": "/ticket2calendar/static/css/main.ba14d30d.chunk.css.map",
+    "static/js/2.6d0174da.chunk.js.LICENSE": "/ticket2calendar/static/js/2.6d0174da.chunk.js.LICENSE",
     "static/media/airplane.svg": "/ticket2calendar/static/media/airplane.2e6814f3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8f901e58.js",
-    "static/js/2.bb42fe6c.chunk.js",
-    "static/css/main.8687cdf2.chunk.css",
-    "static/js/main.a6aaf690.chunk.js"
+    "static/js/2.6d0174da.chunk.js",
+    "static/css/main.ba14d30d.chunk.css",
+    "static/js/main.0b82f15e.chunk.js"
   ]
 }

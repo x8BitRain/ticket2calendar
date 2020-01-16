@@ -150,7 +150,7 @@ function scanBarcode() {
     console.log("Ran into error code", err);
     let headtxt = document.getElementById('headtxt');
     document.getElementById('loader').remove();
-    headtxt.innerHTML = `<center><p>Ran into Error ${err} :(</p><a href="/">Retry</a></center>`;
+    headtxt.innerHTML = `<center><p>Ran into Error ${err} :(</p><a href="" onClick="location.reload();">Retry</a></center>`;
     headtxt.style = 'color: red; padding-top: 9px;';
   } else {
     null
