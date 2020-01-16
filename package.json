@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bcbp-parser": "https://github.com/x8BitRain/bcbp-parser/tarball/master",
+    "ics": "^2.18.0",
     "mapbox-gl": "^1.6.1",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",

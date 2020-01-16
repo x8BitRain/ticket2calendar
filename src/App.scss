@@ -126,6 +126,7 @@ details {
     grid-template-areas: ". ." ". ." ". .";
     grid-gap: 30px;
     text-align: center;
+    margin: 30 0 30 0;
     .grid-item {
       p:nth-of-type(1) {
         font-weight: 900;
