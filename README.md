@@ -5,7 +5,7 @@ https://x8bitrain.github.io/ticket2calendar/
 Proof of concept and fully clientside boarding pass scanner in your browser. Built in React, using a web assembly build of the barcode scanning library [xzing](https://github.com/yushulx/zxing-cpp-emscripten). Take any boarding pass with a PDF-417 or Aztec barcode and scan it to view your flight itinerary and add it to any popular online calendar.
 
 ## How to use
-Point your camera to a boarding pass that looks like this or this, when the barcode is detected the page will display your ticket's itinerary with a map of the route.
+Point your camera to a boarding pass that looks like [this](https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/pdf417_bcbp.png) or [this](https://raw.githubusercontent.com/x8BitRain/ticket2calendar/master/public/aztec_bcbp.png), when the barcode is detected the page will display your ticket's itinerary with a map of the route.
 
 ## Dependancies
 	"bcbp-parser": "https://github.com/x8BitRain/bcbp-parser/tarball/master",
