@@ -43,7 +43,6 @@
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "react-app-rewired": "^2.1.5"
+    "gh-pages": "^2.1.1"
   }
 }
