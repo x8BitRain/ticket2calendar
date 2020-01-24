@@ -5,18 +5,18 @@
     "main.js.map": "/ticket2calendar/static/js/main.0b82f15e.chunk.js.map",
     "runtime-main.js": "/ticket2calendar/static/js/runtime-main.8f901e58.js",
     "runtime-main.js.map": "/ticket2calendar/static/js/runtime-main.8f901e58.js.map",
-    "static/js/2.6d0174da.chunk.js": "/ticket2calendar/static/js/2.6d0174da.chunk.js",
-    "static/js/2.6d0174da.chunk.js.map": "/ticket2calendar/static/js/2.6d0174da.chunk.js.map",
+    "static/js/2.8e0edba9.chunk.js": "/ticket2calendar/static/js/2.8e0edba9.chunk.js",
+    "static/js/2.8e0edba9.chunk.js.map": "/ticket2calendar/static/js/2.8e0edba9.chunk.js.map",
     "index.html": "/ticket2calendar/index.html",
-    "precache-manifest.c83d774c2b59aa61cc8432883b3253c1.js": "/ticket2calendar/precache-manifest.c83d774c2b59aa61cc8432883b3253c1.js",
+    "precache-manifest.80209a9c459b20d125892d882da3a427.js": "/ticket2calendar/precache-manifest.80209a9c459b20d125892d882da3a427.js",
     "service-worker.js": "/ticket2calendar/service-worker.js",
     "static/css/main.ba14d30d.chunk.css.map": "/ticket2calendar/static/css/main.ba14d30d.chunk.css.map",
-    "static/js/2.6d0174da.chunk.js.LICENSE": "/ticket2calendar/static/js/2.6d0174da.chunk.js.LICENSE",
+    "static/js/2.8e0edba9.chunk.js.LICENSE": "/ticket2calendar/static/js/2.8e0edba9.chunk.js.LICENSE",
     "static/media/airplane.svg": "/ticket2calendar/static/media/airplane.2e6814f3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8f901e58.js",
-    "static/js/2.6d0174da.chunk.js",
+    "static/js/2.8e0edba9.chunk.js",
     "static/css/main.ba14d30d.chunk.css",
     "static/js/main.0b82f15e.chunk.js"
   ]
